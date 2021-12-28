@@ -57,20 +57,15 @@ class MainActivity : AppCompatActivity() {
 
         paint.xfermode = PorterDuffXfermode(PorterDuff.Mode.SRC_OVER) // Text Overlapping Pattern
 
-        // some more settings...
-
-        // some more settings...
         canvas.drawBitmap(originalBitmap, 0f, 0f, paint)
         canvas.drawText("Testing...", 10f, 30f, paint)
-        // NEWLY ADDED CODE ENDS HERE ]
-        setImage(imgView, originalBitmap)
-        // NEWLY ADDED CODE ENDS HERE ]
+
+        setImage(originalBitmap)
 //        originalBitmap.compress(Bitmap.CompressFormat.JPEG, 90, out)
     }
 
-    private fun setImage(iv: ImageView, resource: Bitmap) {
+    private fun setImage(resource: Bitmap) {
 
-
-        iv.setImageBitmap(resource)
+        imgView.setImageBitmap(resource)
     }
 }
